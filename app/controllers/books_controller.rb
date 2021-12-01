@@ -1,6 +1,9 @@
 class BooksController < ApplicationController
   before_action :set_book, only: %i[ show edit update destroy ]
 
+  # Allow access only to logged in user
+  before_action :authenticate_user!
+
   # GET /books or /books.json
   def index
     @books = Book.all
