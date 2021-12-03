@@ -23,7 +23,9 @@
 
   <div class="field">
    <%= form.label :image %>
-   <%= form.file_field :image %><br>
+    <%= form.file_field :image %><br>
+    <% @book.image.attach(params[:image]) %>
+  
   </div>
 
   <div class="actions">

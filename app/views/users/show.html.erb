@@ -1,7 +1,9 @@
 <h1>プロフィール</h1>
 <p>
   <% if @user.avatar.attached? %>
-    <%= image_tag @user.avatar %>
+    <div style:"width: 400px; height:auto">
+    <%= image_tag(@user.avatar, style: 'width:30%')  %>
+    </div>
   <% end %>
 </p>
 
